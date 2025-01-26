@@ -5,7 +5,7 @@ function proc_csv ($filename, $delimiter, $quote, $columns_to_show) {
 
     echo "<table border=\"1\"> \n";
 
-    $regex = "/(?:^|$delimiter)((?:'([^']*)')|(?:\"[^\"]*\")|(\d+))/";
+    $regex = "/(?:^|$delimiter)((?:$quote([^$quote]*)$quote)|(\d+))/";
 
     $columnNumber = 1;
     $columnArray = explode(":", $columns_to_show);
