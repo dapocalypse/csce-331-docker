@@ -23,8 +23,6 @@ function proc_csv ($filename, $delimiter, $quote, $columns_to_show) {
                 $item = substr($item,1, strlen($item)-2);
             }
 
-            $isSelectedColumn = false;
-
             if ($columns_to_show == "ALL" ||
                 in_array($columnNumber, $columnArray)) {
                 echo "<td>$item</td>\n";
